@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+}
+body, h1, h2, h3, h4, p, q, span {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #111729;
+    font-family: 'Outfit', sans-serif;
+    color: #97A3B6;
+    font-size: 1rem;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+.container{
+    width: 555px;
+    max-width: 50%;
+    margin-top: 240px;
+    position: relative;
+}
+.card{
+    background: url('./assets/bg-image-random-quote.svg') bottom right no-repeat;
+    background-size: cover;
+    background-color: #20293A;
+    padding: 32px 32px 40px;
+    text-align: center;
+    border-radius: 16px;
+}
+.author{
+    margin-bottom: 20px;
+    color: #fff;
+}
+.tags{
+    font-size: .625rem;
+    color: #6466E9;
+    margin-bottom: 24px;
+}
+.tag {
+    border: 1px solid #6466E9;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+.tag + .tag{
+    margin-left: 8px;
+}
+.quote{
+    font-size: 1.5rem;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.button{
+    display: inline;
+    border: 2px solid #20293A;
+    padding: 8px 12px;
+    width: 60px;  
+}
+.button:hover{
+    border: 1px solid #97A3B6;
+    cursor: pointer;
+}
+.button.copy{
+   border-top-right-radius: 12px; 
+   border-bottom-right-radius: 12px; 
+}
+.button.new-quote{
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+
+}
+.button svg{
+    margin: auto;
+    height: 100%;
+    width: 100%;
+}
+.feedback{
+    
+    color: #111729;
+    width: fit-content;
+    padding: 16px;
+    border-radius: 16px;
+    position: absolute;
+    top: 20%;
+    right: 38%;
+    opacity: 0;
+    transition: opacity ease-in-out .5s;
+}
+.feedback.success{
+    background-color: #4aa86e;
+    opacity: 1;
+    transition: opacity ease-in-out .5s;
+}
+.feedback.failed{
+    right: 21%;
+    background-color: rgb(218, 90, 90);
+    opacity: 1;
+    transition: opacity ease-in-out .5s;
+}
+
+@media (max-width: 640px){
+    .container{
+        max-width: 85%;
+    }
+}
